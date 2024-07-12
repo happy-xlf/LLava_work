@@ -1,0 +1,60 @@
+[2024-07-07 18:25:30,497] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+[93m [WARNING] [0m using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+[2024-07-07 18:25:32,161] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-07-07 18:25:32,161] [INFO] [runner.py:568:main] cmd = /root/autodl-tmp/conda/envs/llama_train/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None run.py --deepspeed ds_zero2_no_offload.json --model_name_or_path show_model/model001 --train_type use_lora --data_path /root/autodl-tmp/Models/LLaVA-CC3M-Pretrain-595K --remove_unused_columns false --build_data_from_web false --bf16 true --fp16 false --output_dir output_model_freeze_vison_0705 --num_train_epochs 10 --per_device_train_batch_size 4 --per_device_eval_batch_size 1 --gradient_accumulation_steps 8 --evaluation_strategy no --save_strategy steps --save_steps 20 --learning_rate 4e-4 --overwrite_output_dir true --logging_steps 10
+[2024-07-07 18:25:33,317] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+[93m [WARNING] [0m using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+[2024-07-07 18:25:34,976] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-07-07 18:25:34,976] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-07-07 18:25:34,976] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-07-07 18:25:34,976] [INFO] [launch.py:164:main] dist_world_size=1
+[2024-07-07 18:25:34,976] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-07-07 18:25:34,977] [INFO] [launch.py:256:main] process 46598 spawned with command: ['/root/autodl-tmp/conda/envs/llama_train/bin/python', '-u', 'run.py', '--local_rank=0', '--deepspeed', 'ds_zero2_no_offload.json', '--model_name_or_path', 'show_model/model001', '--train_type', 'use_lora', '--data_path', '/root/autodl-tmp/Models/LLaVA-CC3M-Pretrain-595K', '--remove_unused_columns', 'false', '--build_data_from_web', 'false', '--bf16', 'true', '--fp16', 'false', '--output_dir', 'output_model_freeze_vison_0705', '--num_train_epochs', '10', '--per_device_train_batch_size', '4', '--per_device_eval_batch_size', '1', '--gradient_accumulation_steps', '8', '--evaluation_strategy', 'no', '--save_strategy', 'steps', '--save_steps', '20', '--learning_rate', '4e-4', '--overwrite_output_dir', 'true', '--logging_steps', '10']
+[2024-07-07 18:25:38,084] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+[93m [WARNING] [0m using untested triton version (2.3.0), only 1.0.0 is known to be compatible
+[2024-07-07 18:25:38,435] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-07-07 18:25:38,435] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+trainable params: 40,113,152 || all params: 4,303,170,048 || trainable%: 0.9322
+{'loss': 4.7736, 'grad_norm': 1.6667448282241821, 'learning_rate': 0.00039997850040311743, 'epoch': 0.0}
+{'loss': 4.0165, 'grad_norm': 0.6010710597038269, 'learning_rate': 0.0003999570008062349, 'epoch': 0.0}
+{'loss': 3.772, 'grad_norm': 0.7896740436553955, 'learning_rate': 0.0003999355012093523, 'epoch': 0.0}
+{'loss': 3.7528, 'grad_norm': 0.9672566056251526, 'learning_rate': 0.0003999140016124698, 'epoch': 0.0}
+{'loss': 3.6435, 'grad_norm': 0.7346548438072205, 'learning_rate': 0.0003998925020155872, 'epoch': 0.0}
+{'loss': 3.5248, 'grad_norm': 1.0025385618209839, 'learning_rate': 0.00039987100241870466, 'epoch': 0.0}
+{'loss': 3.4018, 'grad_norm': 0.968588650226593, 'learning_rate': 0.0003998495028218221, 'epoch': 0.0}
+{'loss': 3.3397, 'grad_norm': 0.9836507439613342, 'learning_rate': 0.00039982800322493954, 'epoch': 0.0}
+{'loss': 3.3168, 'grad_norm': 0.9584325551986694, 'learning_rate': 0.000399806503628057, 'epoch': 0.0}
+{'loss': 3.2421, 'grad_norm': 0.9519585371017456, 'learning_rate': 0.0003997850040311744, 'epoch': 0.01}
+{'loss': 3.2428, 'grad_norm': 1.0025076866149902, 'learning_rate': 0.0003997635044342919, 'epoch': 0.01}
+{'loss': 3.2041, 'grad_norm': 0.8955583572387695, 'learning_rate': 0.00039974200483740936, 'epoch': 0.01}
+{'loss': 3.1864, 'grad_norm': 0.8442979454994202, 'learning_rate': 0.00039972050524052677, 'epoch': 0.01}
+{'loss': 3.1713, 'grad_norm': 1.1452269554138184, 'learning_rate': 0.00039969900564364424, 'epoch': 0.01}
+{'loss': 3.1224, 'grad_norm': 1.245248556137085, 'learning_rate': 0.00039967750604676165, 'epoch': 0.01}
+{'loss': 3.1191, 'grad_norm': 1.1206648349761963, 'learning_rate': 0.0003996560064498791, 'epoch': 0.01}
+{'loss': 3.1138, 'grad_norm': 0.8880361318588257, 'learning_rate': 0.00039963450685299653, 'epoch': 0.01}
+{'loss': 3.1409, 'grad_norm': 0.7518770098686218, 'learning_rate': 0.00039961300725611395, 'epoch': 0.01}
+{'loss': 3.084, 'grad_norm': 0.7970565557479858, 'learning_rate': 0.0003995915076592314, 'epoch': 0.01}
+{'loss': 3.1285, 'grad_norm': 0.8069673180580139, 'learning_rate': 0.00039957000806234883, 'epoch': 0.01}
+{'loss': 3.0731, 'grad_norm': 0.8042268753051758, 'learning_rate': 0.0003995485084654663, 'epoch': 0.01}
+{'loss': 3.1238, 'grad_norm': 0.9662725329399109, 'learning_rate': 0.0003995270088685837, 'epoch': 0.01}
+{'loss': 2.9752, 'grad_norm': 0.9405463933944702, 'learning_rate': 0.0003995055092717012, 'epoch': 0.01}
+{'loss': 3.1248, 'grad_norm': 0.7830161452293396, 'learning_rate': 0.0003994840096748186, 'epoch': 0.01}
+{'loss': 3.1188, 'grad_norm': 0.8498729467391968, 'learning_rate': 0.00039946251007793606, 'epoch': 0.01}
+{'loss': 3.0607, 'grad_norm': 0.7829887866973877, 'learning_rate': 0.00039944101048105347, 'epoch': 0.01}
+[2024-07-07 18:54:51,534] [INFO] [launch.py:319:sigkill_handler] Killing subprocess 46598
+[2024-07-07 18:54:52,230] [INFO] [launch.py:328:sigkill_handler] Main process received SIGINT, exiting
