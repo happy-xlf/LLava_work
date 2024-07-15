@@ -10,7 +10,7 @@ deepspeed --include localhost:0 run.py \
     --bf16 true \
     --fp16 false \
     --output_dir output_model_freeze_vison_0712 \
-    --num_train_epochs 10 \
+    --num_train_epochs 1 \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 8 \
@@ -20,10 +20,3 @@ deepspeed --include localhost:0 run.py \
     --learning_rate 4e-4 \
     --overwrite_output_dir true \
     --logging_steps 10
-    
-# --model_max_length 2048
-
-# --save_strategy "steps" \
-# --save_steps 10 \
-# --save_steps 1000 \
-# --save_strategy "epoch" \
